@@ -1,4 +1,5 @@
 # https://leetcode.com/problems/running-sum-of-1d-array/
+#i did this with the family
 from typing import List
 
 class Solution:
@@ -6,15 +7,19 @@ class Solution:
         total = 0
         newList = [] 
         for i in nums: 
-            newList.append(total)
             total = total + i
+            newList.append(total)
             print(total, end='')
+        return newList
 
     def printName(self):
         print("my name is emerald")
 
-s = Solution() 
-s.runningSum( [1,2,3,4] ) 
+s = Solution()
+totalList = []  
+totalList = s.runningSum( [1,2,3,4] ) 
 s.printName()
 
+for i in totalList:
+    print(i)
 
